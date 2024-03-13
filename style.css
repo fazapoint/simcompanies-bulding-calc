@@ -1,0 +1,113 @@
+header {
+    background-color: green;
+}
+.logo {
+    background-color: pink;
+}
+
+.nav-one {
+    background-color: purple;
+}
+
+.nav-two {
+    background-color: lightblue;
+}
+
+.aside {
+    background-color: aqua;
+}
+
+.main-content {
+    background-color: lightcoral;
+}
+
+main {
+    background-color: red;
+}
+
+footer {
+    background-color: grey;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 7vh;
+    padding-bottom: 5vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 5px;
+}
+
+nav,
+.nav-one,
+.nav-two {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    justify-content: space-between;
+    background-color: blue;
+    position: fixed;
+    height: 7vh;
+    top: 0;
+    width: 100%;
+}
+
+.nav-one li,
+.nav-two li {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-two li:nth-last-child(1) {
+    border: 1px solid black;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+main section {
+    margin: 0.5rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+

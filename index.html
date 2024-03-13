@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h2 class="logo">Simcompanies calculator</h2>
+                <ul class="nav-one">
+                    <li>soll</li>
+                    <li>good</li>
+                    <li>man</li>
+                </ul>
+                <ul class="nav-two">
+                    <li>login</li>
+                    <li>register</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="aside">
+                <p>Select a bulding</p>
+                <select name="buildings" id="buildings"></select>
+                <p>Select target level</p>
+                <input type="range" min="1" max="30" class="slider" id="levelSlider">
+                <p>Level: <span id="sliderValue"></span></p>
+                <button>Calculate</button>
+            </section>
+            <section class="main-content">
+                <p>Construction Unit: 50</p>
+                <p>Approx cost: $500000</p>
+            </section>
+        </main>
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>
