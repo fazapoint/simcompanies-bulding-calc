@@ -72,10 +72,6 @@ const buildingTypes = [
     "Water reservoir"
 ];
 
-let default_building_option = document.createElement("option");
-default_building_option.text = "Choose here"
-selectBuildingType.append(default_building_option);
-
 buildingTypes.forEach(building => {
     let option = document.createElement("option");
     option.text = building.name;
