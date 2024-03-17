@@ -1,6 +1,6 @@
-const selectBuildingType = document.querySelector("#buildingType")
-const selectBuildingLevel = document.querySelector('#buildingLevel')
-
+const selectBuildingType = document.querySelector("#buildingType");
+const selectBuildingLevel = document.querySelector('#buildingLevel');
+const basePreview = document.querySelector('.basePreview');
 const buildingTypes = [
     {
         name: "Aerospace electronics",
@@ -85,3 +85,12 @@ for (let i = 1; i <= 50; i++){
     option.value = i;
     selectBuildingLevel.appendChild(option)
 };
+
+selectBuildingType.addEventListener('change', () => {
+    let selectedBuildingName = selectBuildingType.value;
+    let selectedBuilding = buildingTypes.find(element => element.name == selectedBuildingName)
+
+    basePreview.innerHTML = `<p>Base Cost: $${selectedBuilding.baseCost}</p>
+                             <p>Base Time: ${selectedBuilding.baseTime} hours</p>
+                             <p>Base CU: ${selectedBuilding.baseCU} units</p>`;    
+})
