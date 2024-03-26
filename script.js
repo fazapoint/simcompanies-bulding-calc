@@ -1,6 +1,7 @@
 const selectBuildingType = document.querySelector("#buildingType");
 const selectBuildingLevel = document.querySelector('#buildingLevel');
 const basePreview = document.querySelector('.basePreview');
+const btnCalculate = document.querySelector('#btnCalculate');
 
 const fetchedDataBuilding = []; 
 // fetch from api
@@ -19,21 +20,27 @@ fetchBuilding(data => {
     const buildingNames = {
         "0": 
         {
-            buildingName: "Building A",
-            baseCost: 141450,
-            baseBricks: 2255
+            buildingName: "Hangar",
+            baseCost: 100050,
+            baseBrick: 1595,
+            baseRC: 116,
+            basePlank: 464
         },
         "1": 
         {
-            buildingName: "Building B",
-            baseCost: 9999,
-            baseBricks: 9999
+            buildingName: "Car factory",
+            baseCost: 93150,
+            baseBrick: 1485,
+            baseRC: 108,
+            basePlank: 432
         },
         "2": 
         {
-            buildingName: "Building C",
-            baseCost: 6666,
-            baseBricks: 6666
+            buildingName: "Car dealership",
+            baseCost: 20700,
+            baseBrick: 330,
+            baseRC: 24,
+            basePlank: 96
         }
     }
     
@@ -80,7 +87,11 @@ fetchBuilding(data => {
         let selectedBuilding = fetchedDataBuilding.find(element => element.buildingName == selectedBuildingName)
     
         basePreview.innerHTML = `<p>Base Cost: $${selectedBuilding.baseCost}</p>
-                                 <p>Base Time: ${selectedBuilding.costUnits} units</p>
-                                 <p>Base CU: ${selectedBuilding.buildDuration} seconds</p>`;    
+                                 <p>Base CU: ${selectedBuilding.costUnits} units</p>
+                                 <p>Base Time: ${selectedBuilding.buildDuration} seconds</p>`;    
     })
 });
+
+btnCalculate.addEventListener('click', () => {
+    basePreview.innerHTML = `<p>CALCULATED</p>`;
+})
